@@ -8,7 +8,7 @@ import {
   Route
 } from "react-router-dom";
 import Home from './layouts/Home/Home';
-import About from './layouts/About/About';
+import Credentials from './layouts/Credentials/Credentials';
 
 function App() {
 
@@ -19,17 +19,9 @@ function App() {
           <Header />
           <Navigation />
           <Box p={3}>
-            <a 
-                href="https://reactjs.org" 
-                sx={{fontWeight: 'bold', color: 'primary', textDecoration: 'none'}}
-              >
-                Link
-              </a>
-          </Box>
-          <Box p={3}>
               <Routes>
                 <Route exact path="/" element={<Home/>} />
-                <Route exact path="/about" element={<About/>} />
+                <Route exact path="/creds" element={<Credentials/>} />
               </Routes>
           </Box>
         </div>

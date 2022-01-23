@@ -18,7 +18,7 @@ const Header =() => {
             <Box p={3}>
                 <Button 
                     mr={3}
-                    sx={{bg: 'primary', color: 'inverseText'}}
+                    sx={{bg: 'primary', color: 'inverseText', cursor: 'pointer'}}
                     onClick={() => setColorMode(colorMode === 'light' ? 'dark' : 'light')}
                     >
                     {colorMode === 'light' ? 'Dark 🌙' : 'Light ⛅'}
