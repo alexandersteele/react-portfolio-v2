@@ -10,6 +10,7 @@ import {
 import Home from './layouts/Home/Home';
 import Credentials from './layouts/Credentials/Credentials';
 import Projects from './layouts/Projects/Projects';
+import Blog from './layouts/Blog/Blog';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
                 <Route exact path="/" element={<Home/>} />
                 <Route exact path="/creds" element={<Credentials/>} />
                 <Route exact path="/projects" element={<Projects/>} />
+                <Route exact path="/blog" element={<Blog/>} />
               </Routes>
           </Box>
         </Box>

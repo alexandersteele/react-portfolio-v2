@@ -52,11 +52,7 @@ const GitConnectedCreds = ({data}) => {
 }
 
 const Credentials = () => {
-
     const [gitConnected, isGitLoading] = useGitConnected();
-
-    console.log(gitConnected);
-
     return isGitLoading ? <p>Loading...</p> : <GitConnectedCreds data={gitConnected} />;
 }
 

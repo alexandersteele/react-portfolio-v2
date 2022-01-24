@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from 'theme-ui'
 import theme from './theme'
-
+console.log(theme);
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
