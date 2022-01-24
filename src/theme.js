@@ -5,16 +5,16 @@ const theme = {
     },
     initialColorModeName: 'light',
     colors: {
-        text: 'black',
-        inverseText: 'white',
-        background: 'white',
+        text: '#21252b',
+        inverseText: '#f5f5f5',
+        background: '#f5f5f5',
         primary: '#01408e',
         modes: {
             dark: {
-                text: 'white',
-                inverseText: 'black',
+                text: '#f5f5f5',
+                inverseText: '#21252b',
                 background: '#282c34',
-                primary: '#8fceff'
+                primary: '#00a9ea'
             }
         }
     }

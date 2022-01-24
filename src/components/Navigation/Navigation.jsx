@@ -14,11 +14,14 @@ const Navigation = () => {
           <NavLink p={2} sx={{cursor: 'pointer'}} onClick={() => navigate("/creds")}>
             Credentials
           </NavLink>
-          <NavLink p={2} sx={{cursor: 'pointer'}}>
+          <NavLink p={2} sx={{cursor: 'pointer'}} onClick={() => navigate("/projects")}>
             Projects
           </NavLink>
           <NavLink p={2} sx={{cursor: 'pointer'}}>
             Blog
+          </NavLink>
+          <NavLink p={2} sx={{cursor: 'pointer'}}>
+            Contact
           </NavLink>
         </Flex>
       </Box>

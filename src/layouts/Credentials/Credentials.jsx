@@ -1,13 +1,13 @@
 import useGitConnected from "../../hooks/useGitConnected";
-import { Heading, Text, Box } from 'theme-ui';
+import { Heading, Text, Box, Divider } from 'theme-ui';
 
-const GitConnectedAbout = ({data}) => {
+const GitConnectedCreds = ({data}) => {
     return (
         <>
             <Heading as='h2' sx={{fontFamily: 'heading'}}>
                 Experience
             </Heading>
-            <hr />
+            <Divider />
             {data.work.map((work) => (
                 <Box sx={{paddingBottom: '10px'}}>
                     <Heading as='h3' sx={{fontFamily: 'heading'}}>
@@ -21,7 +21,7 @@ const GitConnectedAbout = ({data}) => {
             <Heading as='h2' sx={{fontFamily: 'heading'}}>
                 Education
             </Heading>
-            <hr />
+            <Divider />
             {data.education.map((school) => (
                 <Box sx={{paddingBottom: '10px'}}>
                     <Heading as='h3' sx={{fontFamily: 'heading'}}>
@@ -36,7 +36,7 @@ const GitConnectedAbout = ({data}) => {
             <Heading as='h2' sx={{fontFamily: 'heading'}}>
                 Certificates and Awards
             </Heading>
-            <hr />
+            <Divider />
             {data.awards.map((award) => (
                 <Box sx={{paddingBottom: '10px'}}>
                     <Heading as='h3' sx={{fontFamily: 'heading'}}>
@@ -57,7 +57,7 @@ const Credentials = () => {
 
     console.log(gitConnected);
 
-    return isGitLoading ? <p>Loading...</p> : <GitConnectedAbout data={gitConnected} />;
+    return isGitLoading ? <p>Loading...</p> : <GitConnectedCreds data={gitConnected} />;
 }
 
 export default Credentials;
