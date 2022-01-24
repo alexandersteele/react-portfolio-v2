@@ -19,6 +19,7 @@
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
     "rebass": "^4.0.7",
+    "serve": "^13.0.2",
     "theme-ui": "^0.13.1",
     "typewriter-effect": "^2.18.2",
     "web-vitals": "^2.1.4"
