@@ -1,5 +1,10 @@
 const theme = {
-    a:'red',
+    styles: {
+        a: {
+            color: 'primary',
+            textDecoration: 'none'
+        },
+    },
     fonts: {
         body: 'system-ui, sans-serif',
         heading: '"Avenir Next", sans-serif'
