@@ -4,7 +4,7 @@ import { Heading, Link, Text } from 'theme-ui';
 const GitConnectedProjects = ({data}) => data.projects.map((project) => (
     <>
         <Heading as='h2' sx={{fontFamily: 'heading'}}>
-            <Link href={project.repositoryUrl} sx={{textDecoration: 'none', color:'primary'}}>{project.name}</Link>
+            <Link href={project.repositoryUrl}>{project.name}</Link>
         </Heading>
         <Text sx={{fontWeight: 'bold', display: 'block'}}>{project.primaryLanguage}</Text>
         <Text>{project.summary}</Text>

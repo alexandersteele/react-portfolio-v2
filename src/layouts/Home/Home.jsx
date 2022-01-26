@@ -25,11 +25,11 @@ const GitConnectedHome = ({data}) => {
             <Flex as="nav">
                 {data.basics.profiles.map((profile) => (
                     <Text pr={2} sx={{fontWeight: 'bold'}}>
-                        <Link href={profile.url} sx={{textDecoration: 'none', color: 'primary'}}>{profile.network}</Link>
+                        <Link href={profile.url}>{profile.network}</Link>
                     </Text>
                 ))}
                 <Text sx={{fontWeight: 'bold'}}>
-                    <Link sx={{textDecoration: 'none', color: 'primary'}} href={`mailto:${data.basics.email}`}>{data.basics.email}</Link>
+                    <Link href={`mailto:${data.basics.email}`}>{data.basics.email}</Link>
                 </Text>
             </Flex>
         </>
