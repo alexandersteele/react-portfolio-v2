@@ -5,6 +5,28 @@ const theme = {
             textDecoration: 'none'
         },
     },
+    images: {
+        profile: {
+            width: '100%',
+            '@media screen and (max-width: 55em)': {
+                width: '50%'
+            },
+            paddingRight: 10,
+            paddingTop: 10
+
+        }
+    }, 
+    grids: {
+        profile: {
+            gridTemplateColumns: [2, '1fr 4fr'],
+            '@media screen and (max-width: 70em) and (min-width: 55em)': {
+                gridTemplateColumns: [2, '2fr 4fr']
+            },
+            '@media screen and (max-width: 55em)': {
+                gridTemplateColumns: 'none'
+            } 
+        }
+    },
     fonts: {
         body: 'system-ui, sans-serif',
         heading: '"Avenir Next", sans-serif'
