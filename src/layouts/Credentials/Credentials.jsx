@@ -1,7 +1,9 @@
 import useGitConnected from "../../hooks/useGitConnected";
 import { Heading, Text, Box, Divider } from 'theme-ui';
+import yearsElapsed from "../../utils/yearsElapsed";
 
 const GitConnectedCreds = ({data}) => {
+    console.log(data.work)
     return (
         <>
             <Heading as='h2' sx={{fontFamily: 'heading'}}>
@@ -15,6 +17,7 @@ const GitConnectedCreds = ({data}) => {
                     </Heading>
                     <Text sx={{display: 'block'}}>{work.location}</Text>
                     <Text sx={{display: 'block'}}>{work.position}</Text>
+                    <Text sx={{display: 'block'}}>{yearsElapsed(work.startDate)} years</Text>
                 </Box>
             ))}
 
