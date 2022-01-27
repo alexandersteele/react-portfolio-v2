@@ -23,6 +23,7 @@ const BloggerBlog = ({data, sortBy, searchQuery, setTotalBlogs}) =>
         <>
             <Text sx={{display: 'block'}}>{blog.author.displayName}</Text>
             <Heading as="h2"><Link sx={{textDecoration: 'none', color: 'primary'}} href={blog.url}>{blog.title}</Link></Heading>
+            <Text sx={{display: 'block'}}>{new Date(blog.published).toLocaleDateString()}</Text>
             <BlogContent />
             <br />
             <br />
