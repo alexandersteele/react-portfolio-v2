@@ -3,6 +3,7 @@ import useGitConnected from "../../hooks/useGitConnected";
 
 const GitConnectedHome = ({data}) => {
 
+
     const splitSummary = data.basics.summary.split(/(Business Analysis:|Front-end:|Back-end:|Testing:|\n)/gm);
     const keywords = ["Business Analysis:", "Front-end:", "Back-end:", "Testing:"];
     return (
@@ -16,9 +17,14 @@ const GitConnectedHome = ({data}) => {
                     <Text sx={{display: 'block'}}>{data.basics.locationAsString}</Text>
                     <Text sx={{fontWeight: 'bold', display: 'block'}}>{data.basics.label}</Text>
                     <Divider />
-                    {splitSummary.map((item) => (
-                        keywords.includes(item) ? <Text sx={{color: 'primary', fontWeight: 'bold'}}>{item}</Text> : <Text>{item}</Text>
-                    ))}
+                    {splitSummary.map((item) => {
+                        // Create new line for each paragraph break
+                        if (item === "\n") {
+                            return <Text sx={{display: 'block'}}></Text>
+                        }
+                        // Highlight if item is a header
+                        return keywords.includes(item) ? <Text sx={{color: 'primary', fontWeight: 'bold', display: 'inline-block'}}>{item}</Text> : <Text>{item}</Text>
+                    })}
                     <br />
                     <br />
                     {data.skills.map((skill) => (
