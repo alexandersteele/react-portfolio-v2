@@ -36,7 +36,7 @@ const GitConnectedHome = ({data}) => {
                     <Grid width={[200, null, 250]}>
                         {data.basics.profiles.map((profile) => (
                             <Text pr={2} sx={{fontWeight: 'bold'}}>
-                                <Link href={profile.url}>{profile.network}</Link>
+                                <Link target="_blank" href={profile.url}>{profile.network}</Link>
                             </Text>
                         ))}
                         <Text sx={{fontWeight: 'bold'}}>

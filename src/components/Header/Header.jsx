@@ -11,7 +11,7 @@ const Header =() => {
             <Box p={3} sx={{ flex: '1 1 auto' }}>
                 <Heading as='h1' sx={{fontFamily: 'heading', display: 'inline-block'}}>
                     <Typewriter wrapperClassName="typewrite" onInit={(typewriter)=> {
-                        typewriter.typeString("alexsteele.io").start();
+                        typewriter.typeString("alexsteele.dev").start();
                     }}/>
                 </Heading>
             </Box>

@@ -12,7 +12,7 @@ const BloggerBlog = ({data, sortBy, searchQuery, setTotalBlogs}) =>
     const options = {
         replace: (domNode) => {
             if (domNode.name === 'a' && domNode.children[0].name !== 'img') {
-                return <Text sx={{fontWeight: 'bold', display: 'inline-block'}}><Link href={domNode.attribs.href}>{domNode.attribs.href}</Link></Text>;
+                return <Text sx={{fontWeight: 'bold', display: 'inline-block'}}><Link target="_blank" href={domNode.attribs.href}>{domNode.attribs.href}</Link></Text>;
             }
         }
     }
@@ -22,7 +22,7 @@ const BloggerBlog = ({data, sortBy, searchQuery, setTotalBlogs}) =>
     return (
         <>
             <Text sx={{display: 'block'}}>{blog.author.displayName}</Text>
-            <Heading as="h2"><Link sx={{textDecoration: 'none', color: 'primary'}} href={blog.url}>{blog.title}</Link></Heading>
+            <Heading as="h2"><Link sx={{textDecoration: 'none', color: 'primary'}} target="_blank" href={blog.url}>{blog.title}</Link></Heading>
             <Text sx={{display: 'block'}}>{new Date(blog.published).toLocaleDateString()}</Text>
             <BlogContent />
             <br />
