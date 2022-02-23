@@ -9,12 +9,20 @@ const useBlogger = () => {
           setIsloading(true);
           await fetch(process.env.REACT_APP_BLOGGER_URL)
           .then(res => res.json())
-          .then(data => setBlog(data))
+          .then(data => {
+            setBlog(data);
+            sessionStorage.setItem('blogger', JSON.stringify(data));
+          })
           .catch(err => console.error(err))
           .finally(() => setIsloading(false))
       }
-  
-    fetchData();
+
+      if (sessionStorage.getItem('blogger') !== null) {
+        setBlog(JSON.parse(sessionStorage.getItem('blogger')));
+        setIsloading(false);
+      } else {
+        fetchData();
+      }
     }, [])
   
     return [blog, isLoading];
