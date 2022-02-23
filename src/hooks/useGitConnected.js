@@ -14,12 +14,19 @@ const useGitConnected = () => {
           setIsloading(true);
           await fetch(process.env.REACT_APP_CONNECTED_URL)
           .then(res => res.json())
-          .then(data => setGitConnected(data))
+          .then(data => {
+            setGitConnected(data);
+            sessionStorage.setItem('gitConnected', JSON.stringify(data));
+          })
           .catch(err => console.error(err))
           .finally(() => setIsloading(false))
       }
-  
-      fetchData();
+      if (sessionStorage.getItem('gitConnected') !== null) {
+        setGitConnected(JSON.parse(sessionStorage.getItem('gitConnected')));
+        setIsloading(false);
+      } else {
+        fetchData();
+      }
       return() => {isCancelled.current = true};
     }, [])
   
